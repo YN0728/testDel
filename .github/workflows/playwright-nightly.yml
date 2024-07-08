@@ -57,7 +57,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y \
             libwoff1 \
-            libvpx5 \
+            libvpx6 \
             libevent-2.1-7 \
             libopus0 \
             gstreamer1.0-plugins-base \
@@ -74,7 +74,7 @@ jobs:
             libmanette-0.2-0 \
             libflite1 \
             libgles2-mesa \
-            libx264-155
+            libx264-dev
 
       - name: Run Playwright tests
         run: npx playwright test
