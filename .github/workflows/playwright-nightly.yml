@@ -2,7 +2,7 @@ name: Playwright Tests
 on:
   schedule:
     # Runs every 5 minutes
-    - cron: '*/2 * * * *'
+    - cron: '*/5 * * * *'
   deployment_status:
 jobs:
   test:
