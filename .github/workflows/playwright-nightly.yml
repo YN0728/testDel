@@ -1,0 +1,29 @@
+name: Playwright Nightly Tests
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+#    - cron: '0 0 * * *'
+    - cron: '30 13 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install
+
+      - name: Run Playwright tests
+        run: npx playwright test
