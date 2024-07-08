@@ -388,7 +388,7 @@ test.describe('Routing', () => {
     await page.getByRole('link', { name: 'Active' }).click();
     await page.getByRole('link', { name: 'Completed' }).click();
     await page.getByRole('link', { name: 'All' }).click();
-    await expect(page.getByTestId('todo-item')).toHaveCount(3); // CHANGE TO 3
+    await expect(page.getByTestId('todo-item')).toHaveCount(10); // CHANGE TO 3
   });
 
   test('should highlight the currently applied filter', async ({ page }) => {
