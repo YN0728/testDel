@@ -4,7 +4,8 @@ on:
   schedule:
     # Runs at 00:00 UTC every day
 #    - cron: '0 0 * * *'
-    - cron: '20 13 * * *'
+#    - cron: '20 13 * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   test:
